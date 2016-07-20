@@ -1,3 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Thiết kế form Hành Chính Công</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="https://formbuilder.online/assets/css/form-builder.min.css">
+        <link href="assets/css/lib/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet">
+
+        <script type="text/javascript" charset="utf-8" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="assets/js/formbuilder.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="assets/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </head>
+
+    <body style="cursor: auto;margin-top:60px;">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Thiết kế form Hành Chính Công</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="page_left">
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="page_right">
+                        <ul id="frmb-2-control-box" class="frmb-control ui-sortable">
+                            <li class="icon-button-input ui-sortable-handle" data-components="Button"><span>Button</span></li>
+                            <li class="icon-checkbox ui-sortable-handle" data-components="Checkbox"><span>Checkbox</span></li>
+                            <li class="icon-checkbox-group ui-sortable-handle" data-components="Checkbox Group"><span>Checkbox Group</span></li>
+                            <li class="icon-calendar ui-sortable-handle" data-components="Date Field"><span>Date Field</span></li>
+                            <li class="icon-file-input ui-sortable-handle" data-components="File Upload"><span>File Upload</span></li>
+                            <li class="icon-header ui-sortable-handle" data-components="Header"><span>Header</span></li>
+                            <li class="icon-paragraph ui-sortable-handle" data-components="Paragraph"><span>Paragraph</span></li>
+                            <li class="icon-radio-group ui-sortable-handle" data-components="Radio Group"><span>Radio Group</span></li>
+                            <li class="icon-select ui-sortable-handle" data-components="Select"><span>Select</span></li>
+                            <li class="icon-text-input ui-sortable-handle" data-components="Text Field"><span>Text Field</span></li>
+                            <li class="icon-text-area ui-sortable-handle" data-components="Text Area"><span>Text Area</span></li>
+                        </ul>
+                        <div class="form-actions btn-group"><button id="frmb-0-clear-all" type="button" class="clear-all btn btn-default">Clear</button><button id="frmb-0-view-data" type="button" class="view-data btn btn-default">&lt;/&gt;</button><button class="btn btn-primary form-builder-save" id="frmb-0-save" type="button">Save</button></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</html>
+<!--
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -30,10 +86,10 @@
                         <div id="build">
                             <form id="target" class="form-horizontal">
                                 <fieldset>
-                                    <div class="component" data-content="" data-title="Form Name" data-trigger="manual" data-html="true"><!-- Form Name -->
+                                    <div class="component" data-content="" data-title="Form Name" data-trigger="manual" data-html="true"> Form Name 
                                         <legend>Tiêu đề form</legend>
                                     </div>
-                                    <div class="component" data-content="" data-title="Text Area" data-trigger="manual" data-html="true"><!-- Textarea -->
+                                    <div class="component" data-content="" data-title="Text Area" data-trigger="manual" data-html="true"> Textarea 
                                         <div class="control-group">
                                             <label class="control-label" for="textarea-0">Text Area</label>
                                             <div class="controls">                     
@@ -41,7 +97,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="component" data-content="" data-title="Text Input" data-trigger="manual" data-html="true"><!-- Text input-->
+                                    <div class="component" data-content="" data-title="Text Input" data-trigger="manual" data-html="true"> Text input
                                         <div class="control-group">
                                             <label class="control-label" for="textinput-0">Text Input</label>
                                             <div class="controls">
@@ -61,7 +117,7 @@
                     <div class="tabbable">
                         <form class="form-horizontal" id="components">
                             <div class="multi_selector " id="input">
-                                <div class="component"><!-- Text input-->
+                                <div class="component"> Text input
                                     <div class="control-group">
                                         <label class="control-label" for="textinput">Text Input</label>
                                         <div class="controls">
@@ -70,7 +126,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="component"><!-- Textarea -->
+                                <div class="component"> Textarea 
                                     <div class="control-group">
                                         <label class="control-label" for="textarea">Text Area</label>
                                         <div class="controls">                     
@@ -154,7 +210,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="component"><!-- Select Basic -->
+                                <div class="component"> Select Basic 
                                     <div class="control-group">
                                         <label class="control-label" for="selectbasic">Select</label>
                                         <div class="controls">
@@ -165,7 +221,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="component"><!-- Button -->
+                                <div class="component"> Button 
                                     <div class="control-group">
                                         <label class="control-label" for="singlebutton">Button</label>
                                         <div class="controls">
@@ -177,7 +233,7 @@
                         </form>
                     </div>
                 </div>
-                <!-- / Components -->
+                 / Components 
 
             </div>
 
@@ -188,8 +244,8 @@
                 </div>
             </div>
 
-        </div> <!-- /container -->
+        </div>  /container 
 
 
     </body>
-</html>
+</html>-->
