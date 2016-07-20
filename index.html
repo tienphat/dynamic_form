@@ -1,78 +1,195 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Thiết kế form Hành Chính Công</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <title>Thiết kế form Hành Chính Công</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/lib/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
-  </head>
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/lib/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet">
 
-  <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">Thiết kế form Hành Chính Công</a>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row clearfix">
-        <!-- Building Form. -->
-        <div class="span6">
-          <div class="clearfix">
-            <h2>Form</h2>
-            <hr>
-            <div id="build">
-              <form id="target" class="form-horizontal">
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- / Building Form. -->
+        <script type="text/javascript" charset="utf-8" src="assets/js/jquery.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+    </head>
 
-        <!-- Components -->
-        <div class="span6">
-          <!--<h2>Drag & Drop components</h2>-->
-          <hr>
-          <div class="tabbable">
-            <ul class="nav nav-tabs" id="formtabs">
-              <!-- Tab nav -->
-            </ul>
-            <form class="form-horizontal" id="components">
-              <fieldset>
-                <div class="tab-content">
-                  <!-- Tabs of snippets go here -->
+    <body style="zoom: 1;">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">Thiết kế form Hành Chính Công</a>
                 </div>
-              </fieldset>
-            </form>
-          </div>
+            </div>
         </div>
-        <!-- / Components -->
+        <div class="container">
+            <div class="row clearfix">
+                <div class="span8">
+                    <div class="clearfix">
+                        <h2>Form</h2>
+                        <hr>
+                        <div id="build">
+                            <form id="target" class="form-horizontal">
+                                <fieldset>
+                                    <div class="component" data-content="" data-title="Form Name" data-trigger="manual" data-html="true"><!-- Form Name -->
+                                        <legend>Tiêu đề form</legend>
+                                    </div>
+                                    <div class="component" data-content="" data-title="Text Area" data-trigger="manual" data-html="true"><!-- Textarea -->
+                                        <div class="control-group">
+                                            <label class="control-label" for="textarea-0">Text Area</label>
+                                            <div class="controls">                     
+                                                <textarea id="textarea-0" name="textarea-0">default text</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="component" data-content="" data-title="Text Input" data-trigger="manual" data-html="true"><!-- Text input-->
+                                        <div class="control-group">
+                                            <label class="control-label" for="textinput-0">Text Input</label>
+                                            <div class="controls">
+                                                <input id="textinput-0" name="textinput-0" type="text" placeholder="placeholder">
+                                                <p class="help-block">help</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+                    <h2>Kéo & thả</h2>
+                    <hr>
+                    <div class="tabbable">
+                        <form class="form-horizontal" id="components">
+                            <div class="multi_selector " id="input">
+                                <div class="component"><!-- Text input-->
+                                    <div class="control-group">
+                                        <label class="control-label" for="textinput">Text Input</label>
+                                        <div class="controls">
+                                            <input id="textinput" name="textinput" type="text" placeholder="placeholder">
+                                            <p class="help-block">help</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component"><!-- Textarea -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="textarea">Text Area</label>
+                                        <div class="controls">                     
+                                            <textarea id="textarea" name="textarea">default text</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="control-group">
+                                        <label class="control-label" for="multipleradios">Multiple Radios</label>
+                                        <div class="controls">
+                                            <label class="radio" for="multipleradios-0">
+                                                <input type="radio" name="multipleradios" id="multipleradios-0" value="Option one" checked="checked">
+                                                Option one
+                                            </label>
+                                            <label class="radio" for="multipleradios-1">
+                                                <input type="radio" name="multipleradios" id="multipleradios-1" value="Option two">
+                                                Option two
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="control-group">
+                                        <label class="control-label">Inline Radios</label>
+                                        <div class="controls">
+                                            <label class="radio inline" for="multipleradiosinline-0">
+                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-0" value="1" checked="checked">
+                                                1
+                                            </label>
+                                            <label class="radio inline" for="multipleradiosinline-1">
+                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-1" value="2">
+                                                2
+                                            </label>
+                                            <label class="radio inline" for="multipleradiosinline-2">
+                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-2" value="3">
+                                                3
+                                            </label>
+                                            <label class="radio inline" for="multipleradiosinline-3">
+                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-3" value="4">
+                                                4
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="control-group">
+                                        <label class="control-label">Multiple Checkboxes</label>
+                                        <div class="controls">
+                                            <label class="checkbox" for="multiplecheckboxes-0">
+                                                <input type="checkbox" name="multiplecheckboxes" id="multiplecheckboxes-0" value="Option one">
+                                                Option one
+                                            </label>
+                                            <label class="checkbox" for="multiplecheckboxes-1">
+                                                <input type="checkbox" name="multiplecheckboxes" id="multiplecheckboxes-1" value="Option two">
+                                                Option two
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component">
+                                    <div class="control-group">
+                                        <label class="control-label">Inline Checkboxes</label>
+                                        <div class="controls">
+                                            <label class="checkbox inline" for="multiplecheckboxesinline-0">
+                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-0" value="1">
+                                                1
+                                            </label>
+                                            <label class="checkbox inline" for="multiplecheckboxesinline-1">
+                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-1" value="2">
+                                                2
+                                            </label>
+                                            <label class="checkbox inline" for="multiplecheckboxesinline-2">
+                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-2" value="3">
+                                                3
+                                            </label>
+                                            <label class="checkbox inline" for="multiplecheckboxesinline-3">
+                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-3" value="4">
+                                                4
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component"><!-- Select Basic -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="selectbasic">Select</label>
+                                        <div class="controls">
+                                            <select id="selectbasic" name="selectbasic">
+                                                <option>Option one</option>
+                                                <option>Option two</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component"><!-- Button -->
+                                    <div class="control-group">
+                                        <label class="control-label" for="singlebutton">Button</label>
+                                        <div class="controls">
+                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- / Components -->
 
-      </div>
+            </div>
 
-      <div class="row clearfix">
-        <div class="span12">
-          <hr>
-          Hành Chính Công<br/>
-        </div>
-      </div>
+            <div class="row clearfix">
+                <div class="span12">
+                    <hr>
+                    Hành Chính Công<br>
+                </div>
+            </div>
 
-    </div> <!-- /container -->
+        </div> <!-- /container -->
 
-    <script data-main="assets/js/main-built.js" src="assets/js/lib/require.js" ></script>
-<!--    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
-      ga('create', 'UA-13083321-13', 'minikomi.github.io');
-      ga('send', 'pageview');
 
-    </script>-->
-  </body>
+    </body>
 </html>
