@@ -40,6 +40,8 @@ $(document).ready(function (){
                     myarr.component += '    <div class="col-md-8">';
                     myarr.component += '         <input type="text" class="form-control" name="" id="" value=""/></span><br>';
                     myarr.component += '    </div>';
+                    myarr.component += '    <div class ="box_icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>';
+                    myarr.component += '    <i class="fa fa-times" aria-hidden="true"></i></div>';
                     myarr.component += '</div>';
                     break;
                 case 'Text Area':
