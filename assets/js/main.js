@@ -108,6 +108,7 @@ $(document).ready(function () {
         drop: function () {
             $('.dropable').append(myarr.column);
             set_drop();
+            
         }
     });
 
