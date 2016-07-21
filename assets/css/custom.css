@@ -1,17 +1,17 @@
 body {
-  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-  padding-bottom: 10px;
-  position: relative;
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    padding-bottom: 10px;
+    position: relative;
 }
 
 @media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
+    body {
+        padding-top: 0px;
+    }
 }
 .page_left {
     border: 3px dashed #ccc;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
     background-color: rgba(255,255,255,.25);
     min-height: 430px;
 }
@@ -33,7 +33,15 @@ div.droppable {
     border: 2px dashed #bbb8b8;
     padding: 10px;
 }
+
 .frmb-control td {
     border: 1px solid gray;
     padding: 9px 40px;
+}
+textarea {
+    height: 30px;     
+}
+.page_left1{
+    min-height: 50px;
+    border: 3px dashed #ccc;
 }
