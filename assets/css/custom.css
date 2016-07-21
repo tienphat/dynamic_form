@@ -45,8 +45,16 @@ textarea {
 }
 .column_sel{
     min-height: 50px;
-    border: 3px double #ccc;
+    border: 1px dashed #cccccc;
 }
 .page_left{
         padding-left: 30px;
+}
+.column_sel h4 {
+    margin: 0px;
+    border-bottom: 1px solid gray;
+}
+
+.column_sel {
+    padding: 10px 0px;
 }
