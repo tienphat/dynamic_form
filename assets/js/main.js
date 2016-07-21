@@ -4,14 +4,15 @@ $(document).ready(function () {
         column: ''
     };
 
-
     $('.page_right .column_select').draggable({
         containment: 'document', helper: 'clone',
         start: function () {
             components = $(this).attr('data-components1');
             switch (components) {
                 case 'Column1':
+
                     myarr.column = '<div class="row"><div class="col-md-12 column_sel"></div></div>';
+
                     break;
                 case 'Column2':
                     myarr.column = '<div class="row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div></div>';
@@ -34,6 +35,7 @@ $(document).ready(function () {
             components = $(this).attr('data-components');
             switch (components) {
                 case 'Text':
+
                     myarr.component = '<div class="form-group">';
                     myarr.component += '    <label class="col-md-4 control-label" for="textinput">Text Input</label>  ';
                     myarr.component += '    <div class="col-md-8">';
