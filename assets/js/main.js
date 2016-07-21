@@ -94,6 +94,7 @@ $(document).ready(function () {
         drop: function () {
             $('.dropable').append(myarr.column);
             set_drop();
+            
         }
     });
     
@@ -104,6 +105,7 @@ $(document).ready(function () {
             accept: '.component',
             drop: function () {
                 $(this).append(myarr.component);
+                
             }
         });
     }
