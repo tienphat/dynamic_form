@@ -13,8 +13,8 @@
         <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/formbuilder.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
-        <!--<script src="assets/js/minh.js" type="text/javascript"></script>-->
+        <!--<script type="text/javascript" src="assets/js/main.js"></script>-->
+        <script src="assets/js/minh.js" type="text/javascript"></script>
     </head>
 
     <body style="cursor: auto;margin-top:60px;">
@@ -29,43 +29,25 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="page_left">
-                        <div class="droppable">
-                            <div class="col-md-12 droped">
-                                <div class="row r_box_component">
-                                    <div class="col-md-6">
-                                        <div class="box_com">
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="box_com">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="dropable">
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="page_right">
-                        <ul id="frm_control" class="frmb-control ui-sortable">
-                            <li class="icon-text-input ui-sortable-handle item_dragable" data-column="1"><span>1 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle item_dragable" data-column="2"><span>2 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle item_dragable" data-column="3"><span>3 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle item_dragable" data-column="4"><span>4 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle item_dragable" data-components="Text_Field"><span>Text Field</span></li>
-                            <li class="icon-text-area ui-sortable-handle item_dragable" data-components="Text_Area"><span>Text Area</span></li>
-                            <li class="icon-radio-group ui-sortable-handle item_dragable" data-components="Radio"><span>Radio</span></li>
-                            <li class="icon-checkbox ui-sortable-handle item_dragable" data-components="Checkbox"><span>Checkbox</span></li>
-                            <li class="icon-select ui-sortable-handle item_dragable" data-components="Select"><span>Select</span></li>
-                            <li class="icon-header ui-sortable-handle item_dragable" data-components="Header"><span>Header</span></li>
-                            <li class="icon-calendar ui-sortable-handle item_dragable" data-components="Date_Field"><span>Date Field</span></li>
-
-                            <!--                            <li class="icon-paragraph ui-sortable-handle item_dragable" data-components="Text"><span>Text</span></li>
-                                                        <li class="icon-button-input ui-sortable-handle item_dragable" data-components="Button"><span>Button</span></li>
-                                                        <li class="icon-file-input ui-sortable-handle item_dragable" data-components="File_Upload"><span>File Upload</span></li>-->
-
+                        <ul id="frmb-2-control-box" class="frmb-control ui-sortable">
+                            <li class="icon-text-input column_select" data-components1="Column1"><span>1 Column</span></li>
+                            <li class="icon-text-input  column_select" data-components1="Column2"><span>2 Column</span></li>
+                            <li class="icon-text-input  column_select" data-components1="Column3"><span>3 Column</span></li>
+                            <li class="icon-text-input  column_select" data-components1="Column4"><span>4 Column</span></li>
+                            <li class="icon-text-input component" data-components="Text"><span>Text</span></li>
+                            <li class="icon-text-area component" data-components="Text Area"><span>Text Area</span></li>
+                            <li class="icon-radio-group component" data-components="Radio"><span>Radio</span></li>
+                            <li class="icon-checkbox component" data-components="Checkbox"><span>Checkbox</span></li>
+                            <li class="icon-select component" data-components="Select"><span>Select</span></li>
+                            <li class="icon-header component" data-components="Header"><span>Header</span></li>
+                            <li class="icon-calendar component item_dragable" data-components="Date_Field"><span>Date Field</span></li>    
                         </ul>
                         <div class="form-actions btn-group"><button id="frmb-0-clear-all" type="button" class="clear-all btn btn-default">Clear</button><button id="frmb-0-view-data" type="button" class="view-data btn btn-default">&lt;/&gt;</button><button class="btn btn-primary form-builder-save" id="frmb-0-save" type="button">Save</button></div>
                     </div>

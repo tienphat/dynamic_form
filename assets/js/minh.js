@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    $('.page_right .ui-sortable-handle1').draggable({
+    $('.page_right .column_select').draggable({
         containment: 'document',helper: 'clone',
         start: function (){
             components = $(this).attr('data-components1');
@@ -16,10 +16,13 @@ $(document).ready(function (){
                 case 'Column4':
                     contentsa = '<div class="row"><div class="col-md-3 page_left1"></div><div class="col-md-3 page_left1"></div><div class="col-md-3 page_left1"></div><div class="col-md-3 page_left1"></div></div>';
                     break;
+                default:
+                    contentsa = '<div class="col-md-12 page_left1"></div>';
+                    break;
             }
         }
     });
-    $('.page_right .ui-sortable-handle').draggable({
+    $('.page_right .component').draggable({
         containment: 'document',helper: 'clone',
         start: function (){
             components = $(this).attr('data-components');
@@ -42,15 +45,18 @@ $(document).ready(function (){
                 case 'Header':
                     contents = '<span class="chinh1">Label:<label>header</label></span><br>';
                     break;
+                default:
+                    contents = '<span class="chinh1"><lable>Text:</lable><input type="text" /></span><br>';
+                    break;
             }
         }
     });
     $('.page_left').droppable({
-        accept: '.ui-sortable-handle1',
+        accept: '.column_select',
         drop: function (){
             $('.page_left').append(contentsa);
             $('.page_left1').droppable({
-                accept: '.ui-sortable-handle',
+                accept: '.component',
                 drop: function (){
                     $(this).append(contents);
                 }
