@@ -34,7 +34,7 @@ $(document).ready(function () {
                     myarr.component += '         <input type="text" class="form-control" name="" id="" value=""/></span><br>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
-                    myarr.component += '     <button class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.component += '     <button class="btn btn-default btn_delete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
                 case 'Text Area':
@@ -44,7 +44,7 @@ $(document).ready(function () {
                     myarr.component += '         <textarea name="" class="form-control"  id="" cols="10" rows="3"></textarea>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
-                    myarr.component += '     <button class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.component += '     <button class="btn btn-default btn_delete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
                 case 'Radio':
@@ -55,7 +55,7 @@ $(document).ready(function () {
                     myarr.component += '         <input type="radio"  name="" id="" value="2"/>2';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
-                    myarr.component += '     <button class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.component += '     <button class="btn btn-default btn_delete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
                 case 'Checkbox':
@@ -66,7 +66,7 @@ $(document).ready(function () {
                     myarr.component += '         <input type="checkbox" name="" id="" value="2"/>2';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
-                    myarr.component += '     <button class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.component += '     <button class="btn btn-default btn_delete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
                 case 'Select':
@@ -76,7 +76,7 @@ $(document).ready(function () {
                     myarr.component += '         <select name="" class="form-control" ><option value="1">Option1</option></select>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
-                    myarr.component += '     <button class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.component += '     <button class="btn btn-default btn_delete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
                 case 'Header':
@@ -85,7 +85,7 @@ $(document).ready(function () {
                     myarr.component += '         <h4><label>This is a label</label></h4>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
-                    myarr.component += '     <button class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.component += '     <button class="btn btn-default btn_delete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
                 case 'Date_Field':
@@ -95,7 +95,7 @@ $(document).ready(function () {
                     myarr.component += '         <input type="date" class="form-control"  name="" id="" value=""/>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
-                    myarr.component += '     <button class="btn btn-default"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.component += '     <button class="btn btn-default btn_delete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
             }
@@ -119,12 +119,18 @@ $(document).ready(function () {
                 if ($(this).children().length <= 0 ) {
                     $(this).append(myarr.component);
                 }
-                $('.column_sel, .btn_edit').click(function(){
-                    $('#modalComponent').modal('show');
+                $(".btn_delete").click(function() {
+                    $(this).parent(".box_component").remove();
                 });
+                $('.btn_edit').click(function(){
+                $('#modalComponent').modal('show');
+    });
             }
         });
     }
+    $('.btn_edit').click(function(){
+        $('#modalComponent').modal('show');
+    });
     
 //    show modal
     
