@@ -26,8 +26,7 @@ div.droppable {
 .box_com{
     width: 100%;
 }
-.box_component,.box_com {
-    height: 53px;
+.box_component {
 }
 .r_box_component {
     border: 2px dashed #bbb8b8;
@@ -40,6 +39,14 @@ div.droppable {
     border: 1px solid gray;
     padding: 9px 40px;
 }
+.form_designed .column_sel {
+    border: none;
+}
+
+.form_designed {
+    border: 2px dashed #cccccc;
+    margin-top: 20px;
+}
 textarea {
     height: 30px;     
 }
@@ -50,7 +57,23 @@ textarea {
 .page_left{
         padding-left: 30px;
 }
+//datepicker
+.datepicker .day.old {
+    color: #a9a7a7;
+}
 
+.datepicker .day.today.active {
+    background: #337ab7;
+    color: #fff;
+    border-radius: 4px;
+}
+.datepicker .day:hover {
+    cursor: pointer;
+}
+.datepicker .day {
+    font-size: 15px;
+}
+//end datepicker
 .column_sel h4 {
     margin: 0px;
     border-bottom: 1px solid gray;
