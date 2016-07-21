@@ -43,7 +43,7 @@ div.droppable {
 textarea {
     height: 30px;     
 }
-.page_left1{
+.column_sel{
     min-height: 50px;
     border: 3px double #ccc;
 }

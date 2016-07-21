@@ -1,23 +1,29 @@
 $(document).ready(function (){
+    var myarr = {
+        component: '',
+        column: ''
+    }
+    
+    
     $('.page_right .column_select').draggable({
         containment: 'document',helper: 'clone',
         start: function (){
             components = $(this).attr('data-components1');
             switch(components) {
                 case 'Column1':
-                    contentsa = '<div class="row"><div class="col-md-12 page_left1"></div></div>';
+                    myarr.column = '<div class="row"><div class="col-md-12 column_sel"></div></div>';
                     break;
                 case 'Column2':
-                    contentsa = '<div class="row"><div class="col-md-6 page_left1"></div><div class="col-md-6 page_left1"></div></div>';
+                    myarr.column = '<div class="row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div></div>';
                     break;
                 case 'Column3':
-                    contentsa = '<div class="row"><div class="col-md-4 page_left1"></div><div class="col-md-4 page_left1"></div><div class="col-md-4 page_left1"></div></div>';
+                    myarr.column = '<div class="row"><div class="col-md-4 column_sel"></div><div class="col-md-4 column_sel"></div><div class="col-md-4 column_sel"></div></div>';
                     break;
                 case 'Column4':
-                    contentsa = '<div class="row"><div class="col-md-3 page_left1"></div><div class="col-md-3 page_left1"></div><div class="col-md-3 page_left1"></div><div class="col-md-3 page_left1"></div></div>';
+                    myarr.column = '<div class="row"><div class="col-md-3 column_sel"></div><div class="col-md-3 column_sel"></div><div class="col-md-3 column_sel"></div><div class="col-md-3 column_sel"></div></div>';
                     break;
                 default:
-                    contentsa = '<div class="col-md-12 page_left1"></div>';
+                    myarr.column = '<div class="col-md-12 column_sel"></div>';
                     break;
             }
         }
@@ -28,32 +34,61 @@ $(document).ready(function (){
             components = $(this).attr('data-components');
             switch(components) {
                 case 'Text':
-                    <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Text Input</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
-  <span class="help-block">help</span>  
-  </div>
-</div>
-                    contents = '<span class="chinh1"><lable>Text:</lable><input type="text" /></span><br>';
+                    myarr.component = '<div class="form-group">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Text Input</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '         <input type="text" class="form-control" name="" id="" value=""/></span><br>';
+                    myarr.component += '    </div>';
+                    myarr.component += '</div>';
                     break;
                 case 'Text Area':
-                    contents = '<span class="chinh1"><lable>Textarea:</lable><textarea></textarea></span><br>';
+                    myarr.component = '<div class="form-group">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Textarea</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '         <textarea name="" class="form-control"  id="" cols="10" rows="3"></textarea>';
+                    myarr.component += '    </div>';
+                    myarr.component += '</div>';
                     break;
                 case 'Radio':
-                    contents = '<span class="chinh1">Radio: <input type="radio" /></span><br>';
+                    myarr.component = '<div class="form-group">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Radio</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '         <input type="radio"  name="" id="" value="1"/>1';
+                    myarr.component += '         <input type="radio"  name="" id="" value="2"/>2';
+                    myarr.component += '    </div>';
+                    myarr.component += '</div>';
                     break;
                 case 'Checkbox':
-                    contents = '<span class="chinh1">Checkbox:<input type="checkbox" /></span><br>';
+                    myarr.component = '<div class="form-group">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Checkbox</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '         <input type="checkbox" name="" id="" value="1"/>1';
+                    myarr.component += '         <input type="checkbox" name="" id="" value="2"/>2';
+                    myarr.component += '    </div>';
+                    myarr.component += '</div>';
                     break;
                 case 'Select':
-                    contents = '<span class="chinh1">Select:<select></select></span><br>';
+                    myarr.component = '<div class="form-group">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Select</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '         <select name="" class="form-control" ><option value="1">Option1</option></select>';
+                    myarr.component += '    </div>';
+                    myarr.component += '</div>';
                     break;
                 case 'Header':
-                    contents = '<span class="chinh1">Label:<label>header</label></span><br>';
+                    myarr.component = '<div class="form-group">';
+                    myarr.component += '    <div class="col-md-12">';
+                    myarr.component += '         <label>This is a label</label>';
+                    myarr.component += '    </div>';
+                    myarr.component += '</div>';
                     break;
-                default:
-                    contents = '<span class="chinh1"><lable>Text:</lable><input type="text" /></span><br>';
+                case 'Date_Field':
+                    myarr.component = '<div class="form-group">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Date</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '         <input type="date" class="form-control"  name="" id="" value=""/>';
+                    myarr.component += '    </div>';
+                    myarr.component += '</div>';
                     break;
             }
         }
@@ -61,11 +96,11 @@ $(document).ready(function (){
     $('.page_left').droppable({
         accept: '.column_select',
         drop: function (){
-            $('.dropable').append(contentsa);
-            $('.page_left1').droppable({
+            $('.dropable').append(myarr.column);
+            $('.column_sel').droppable({
                 accept: '.component',
                 drop: function (){
-                    $(this).append(contents);
+                    $(this).append(myarr.component);
                 }
             });
         }
