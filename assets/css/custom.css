@@ -55,7 +55,9 @@ textarea {
     margin: 0px;
     border-bottom: 1px solid gray;
 }
-
+.box_button button {
+    padding: 5px 37px;
+}
 .column_sel {
     padding: 10px 0px;
 }
@@ -65,7 +67,7 @@ textarea {
     right: 0px;
     display: none;
 }
-.box_compnent:hover .box_icon{
+.box_component:hover .box_icon{
     display: block;
 }
 

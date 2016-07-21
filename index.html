@@ -32,11 +32,11 @@
                             <h3><label>Tiêu đề</label></h3>
                         </div>
                         <div class="dropable">
-                             <div class="row">
-                                 <div class="col-md-12 column_sel ui-droppable">
-                                     
-                                 </div>
-                             </div>
+                            <div class="row">
+                                <div class="col-md-12 column_sel ui-droppable">
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,52 @@
                         <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Some text in the modal.</p>
+                            <div class="form-group">
+                                <label class="col-md-12 control-label"> ID / Name </label>
+                                <div class="col-md-12">
+                                    <input class="form-control field" data-type="input" type="text" name="id" id="id" value="textinput">
+                                </div>
+                            </div><div class="form-group">
+                                <label class="col-md-12 control-label"> Label Text </label>
+                                <div class="col-md-12">
+                                    <input class="form-control field" data-type="input" type="text" name="label" id="label" value="Text Input">
+                                </div>
+                            </div><div class="form-group">
+                                <label class="col-md-12 control-label"> Placeholder </label>
+                                <div class="col-md-12">
+                                    <input class="form-control field" data-type="input" type="text" name="placeholder" id="placeholder" value="placeholder">
+                                </div>
+                            </div><div class="form-group">
+                                <label class="col-md-12 control-label"> Help Text </label>
+                                <div class="col-md-12">
+                                    <input class="form-control field" data-type="input" type="text" name="helptext" id="helptext" value="help">
+                                </div>
+                            </div><div class="checkbox">
+                                <div class="col-md-12">
+                                    <label>
+                                        <input type="checkbox" data-type="checkbox" class="field" name="required" id="required">
+                                        Required
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"> Input Size </label>
+                                <div class="col-md-8">
+                                    <select class="form-control field" data-type="select" id="inputsize">
+                                        <option value="col-md-1">Mini</option>
+                                        <option value="col-md-2">Small</option>
+                                        <option value="col-md-4" selected="">Medium</option>
+                                        <option value="col-md-5">Large</option>
+                                        <option value="col-md-6">Xlarge</option>
+                                        <option value="col-md-8">Xxlarge</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group box_button text-center">
+                                <button id="save" class="btn btn-info btnSave">Lưu</button>&nbsp;
+                                <button id="cancel" class="btn btn-danger">Hủy</button>
+                            </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
