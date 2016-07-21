@@ -47,7 +47,7 @@ input[type=text] {
     height: 34px;
 }
 .page_left {
-    border: 3px dashed #ccc;
+    border: 3px dotted #ccc;
     /*margin-right: 5px;*/
     background-color: rgba(255,255,255,.25);
     min-height: 430px;
@@ -125,5 +125,8 @@ textarea {
 }
 .page_left1{
     min-height: 50px;
-    border: 3px dashed #ccc;
+    border: 3px double #ccc;
+}
+.page_left{
+        padding-left: 30px;
 }

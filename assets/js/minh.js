@@ -5,7 +5,7 @@ $(document).ready(function (){
             components = $(this).attr('data-components1');
             switch(components) {
                 case 'Column1':
-                    contentsa = '<div class="col-md-12 page_left1"></div>';
+                    contentsa = '<div class="row"><div class="col-md-12 page_left1"></div></div>';
                     break;
                 case 'Column2':
                     contentsa = '<div class="row"><div class="col-md-6 page_left1"></div><div class="col-md-6 page_left1"></div></div>';
