@@ -71,8 +71,8 @@ $(document).ready(function () {
                     break;
                 case 'Select':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-3 control-label" for="textinput">Select</label>  ';
-                    myarr.component += '    <div class="col-md-9">';
+                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Select</label>  ';
+                    myarr.component += '    <div class="col-md-10">';
                     myarr.component += '         <select name="" class="form-control" ><option value="1">Option1</option><option value="2">Option2</option></select>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
@@ -90,8 +90,8 @@ $(document).ready(function () {
                     break;
                 case 'Date_Field':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-3 control-label" for="textinput">Date</label>  ';
-                    myarr.component += '    <div class="col-md-9">';
+                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Ngày</label>  ';
+                    myarr.component += '    <div class="col-md-10">';
                     myarr.component += '         <input type="text" placeholder="Ngày/tháng/năm" class="form-control selDate"  name="" id="" value=""/>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
