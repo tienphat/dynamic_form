@@ -3,23 +3,70 @@ $(function () {
     myarr = {
         name: '',
         data: '',
-        col: '',
         column: ''
     };
-    function check_components(type) {
-        switch (type) {
+    function check_column(num) {
+        switch (num) {
             case '1':
-                myarr.column = '1'
+                myarr.column = '<div class="row r_box_component">';
+                myarr.column += '   <div class="col-md-12">';
+                myarr.column += '      <div class="box_com">';
+                myarr.column += '      </div>';
+                myarr.column += '  </div>';
+                myarr.column += '</div>';
                 break;
             case '2':
-                myarr.column = '2'
+                myarr.column = '<div class="row r_box_component">';
+                myarr.column += '<div class="col-md-6">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '</div>';
+                myarr.column += '<div class="col-md-6">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '  </div>';
+                myarr.column += '</div>';
                 break;
             case '3':
-                myarr.column = '3'
+                myarr.column = '<div class="row r_box_component">';
+                myarr.column += '<div class="col-md-4">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '</div>';
+                myarr.column += '<div class="col-md-4">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '</div>';
+                myarr.column += '<div class="col-md-4">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '  </div>';
+                myarr.column += '</div>';
                 break;
             case '4':
-                myarr.column = '4'
+                myarr.column = '<div class="row r_box_component">';
+                myarr.column += '<div class="col-md-3">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '</div>';
+                myarr.column += '<div class="col-md-3">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '</div>';
+                myarr.column += '<div class="col-md-3">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '</div>';
+                myarr.column += '<div class="col-md-3">';
+                myarr.column += '    <div class="box_com">';
+                myarr.column += '    </div>';
+                myarr.column += '  </div>';
+                myarr.column += '</div>';
                 break;
+        }
+    }
+    function check_components(type) {
+        switch (type) {
             case 'Text_Field':
                 myarr.data = '<div class="form-group box_component">';
                 myarr.data += '   <label class="col-md-4 control-label" for="passwordinput">Label</label>';
@@ -78,99 +125,36 @@ $(function () {
         }
     }
 
-    function design_col(column) {
-        switch (column) {
-            case '1':
-                myarr.col = '<div class="row r_box_component">';
-                myarr.col += '   <div class="col-md-12">';
-                myarr.col += '      <div class="box_com">';
-                myarr.col += '      </div>';
-                myarr.col += '  </div>';
-                myarr.col += '</div>';
-                break;
-            case '2':
-                myarr.col = '<div class="row r_box_component">';
-                myarr.col += '<div class="col-md-6">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '</div>';
-                myarr.col += '<div class="col-md-6">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '  </div>';
-                myarr.col += '</div>';
-                break;
-            case '3':
-                myarr.col = '<div class="row r_box_component">';
-                myarr.col += '<div class="col-md-4">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '</div>';
-                myarr.col += '<div class="col-md-4">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '</div>';
-                myarr.col += '<div class="col-md-4">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '  </div>';
-                myarr.col += '</div>';
-                break;
-            case '4':
-                myarr.col = '<div class="row r_box_component">';
-                myarr.col += '<div class="col-md-3">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '</div>';
-                myarr.col += '<div class="col-md-3">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '</div>';
-                myarr.col += '<div class="col-md-3">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '</div>';
-                myarr.col += '<div class="col-md-3">';
-                myarr.col += '    <div class="box_com">';
-                myarr.col += '    </div>';
-                myarr.col += '  </div>';
-                myarr.col += '</div>';
-                break;
-        }
-    }
-    ;
-
-    //Get value input radio
-    $('.droppable').droppable({
-        drop: function(){
-            design_col(myarr.column);
-            $('.droppable .droped').append(myarr.col);
-        }
-    });
-    //add event column
-    function add_event_column() {
-        $('.droppable').find('.box_com').each(function () {
-            $(this).droppable({
-                drop: function (event, ui) {
-                    $(this).append(myarr.data);
-                    $(this).sortable({
-                        revert: true
-                    });
-                    $(this).disableSelection();
-                }
-            });
+    set_drag('column');
+    set_drag('components');
+    
+    function set_drag(component) {
+        $('.item_dragable').draggable({
+            helper: "clone", revert: "invalid",
+            start: function () {
+                var selector = $(this).attr('data-' + component);
+                check_column(selector);
+                console.log(selector);
+            }
         });
     }
-
-    $(".item_dragable").each(function () {
-        var selector = $(this).attr('data-components');
-        $(this).draggable({
-//            connectToSortable: ".box_component",
-            helper: "clone",
-            revert: "invalid",
-            start: function () {
-                check_components(selector);
-                add_event_column();
+    //Get value input radio
+    $('.droppable').droppable({
+        drop: function () {
+            $('.droppable .droped').append(myarr.column);
+            $('.box_com').each(function () {
+                $(this).droppable({
+                    drop: function () {
+                        $(this).append(myarr.data);
+                    }
+                });
+            });
+        }
+    });
+    $('.box_com').each(function () {
+        $(this).droppable({
+            drop: function () {
+                $(this).append(myarr.data);
             }
         });
     });
