@@ -5,7 +5,7 @@ $(document).ready(function (){
             components = $(this).attr('data-components1');
             switch(components) {
                 case 'Column1':
-                    contentsa = '<div class="col-md-12 page_left1"></div>';
+                    contentsa = '<div class="row"><div class="col-md-12 page_left1"></div></div>';
                     break;
                 case 'Column2':
                     contentsa = '<div class="row"><div class="col-md-6 page_left1"></div><div class="col-md-6 page_left1"></div></div>';
@@ -28,6 +28,13 @@ $(document).ready(function (){
             components = $(this).attr('data-components');
             switch(components) {
                 case 'Text':
+                    <div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Text Input</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+  <span class="help-block">help</span>  
+  </div>
+</div>
                     contents = '<span class="chinh1"><lable>Text:</lable><input type="text" /></span><br>';
                     break;
                 case 'Text Area':
@@ -36,7 +43,7 @@ $(document).ready(function (){
                 case 'Radio':
                     contents = '<span class="chinh1">Radio: <input type="radio" /></span><br>';
                     break;
-                     case 'Checkbox':
+                case 'Checkbox':
                     contents = '<span class="chinh1">Checkbox:<input type="checkbox" /></span><br>';
                     break;
                 case 'Select':
@@ -54,7 +61,7 @@ $(document).ready(function (){
     $('.page_left').droppable({
         accept: '.column_select',
         drop: function (){
-            $('.page_left').append(contentsa);
+            $('.dropable').append(contentsa);
             $('.page_left1').droppable({
                 accept: '.component',
                 drop: function (){

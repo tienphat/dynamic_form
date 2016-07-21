@@ -33,7 +33,9 @@ div.droppable {
     border: 2px dashed #bbb8b8;
     padding: 10px;
 }
-
+.dropable {
+    padding-right: 15px;
+}
 .frmb-control td {
     border: 1px solid gray;
     padding: 9px 40px;
