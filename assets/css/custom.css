@@ -48,7 +48,7 @@ input[type=text] {
 }
 .page_left {
     border: 3px dashed #ccc;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
     background-color: rgba(255,255,255,.25);
     min-height: 430px;
 }
@@ -119,4 +119,11 @@ form .popover form {
 #target fieldset{
  width: 100%;
  overflow: hidden;
+}
+textarea {
+    height: 30px;     
+}
+.page_left1{
+    min-height: 50px;
+    border: 3px dashed #ccc;
 }
