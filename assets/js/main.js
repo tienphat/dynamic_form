@@ -4,6 +4,7 @@ $(document).ready(function () {
         column: ''
     };
 
+    //Kéo
     $('.page_right .column_select').draggable({
         containment: 'document', helper: 'clone',
         start: function () {
@@ -101,6 +102,8 @@ $(document).ready(function () {
             }
         }
     });
+    
+//    Thả
     $('.page_left').droppable({
         accept: '.column_select',
         drop: function () {
@@ -108,7 +111,7 @@ $(document).ready(function () {
             set_drop();
         }
     });
-
+    
     set_drop();
 
     function set_drop() {
@@ -118,14 +121,18 @@ $(document).ready(function () {
                 if ($(this).children().length <= 0 ) {
                     $(this).append(myarr.component);
                 }
-                $('.column_sel, .btn_edit').click(function(){
+                $('.btn_edit').click(function(){
                     $('#modalComponent').modal('show');
                 });
             }
         });
     }
     
-//    show modal
+    //btnSave
+    $('.form_builder_save').click(function(){
+        var html = $('.page_left').html();
+        $('.form_designed').html(html);
+    });
     
 
 });
