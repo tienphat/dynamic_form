@@ -13,8 +13,7 @@
         <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/formbuilder.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
-        <script src="assets/js/minh.js" type="text/javascript"></script>
+        <script src="assets/js/main.js" type="text/javascript"></script>
     </head>
 
     <body style="cursor: auto;margin-top:60px;">
@@ -27,231 +26,51 @@
         </nav>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 page_left">
-<!--                    <div class="row">
-                        <div class="col-md-6 page_left">
-
+                <div class="col-md-9">
+                    <div class="page_left">
+                        <div class="dropable">
+                            
                         </div>
-                        <div class="col-md-6 page_left">
-
-                        </div>
-                    </div>-->
+                    </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="page_right">
                         <ul id="frmb-2-control-box" class="frmb-control ui-sortable">
-                            <li class="icon-text-input ui-sortable-handle1" data-components1="Column1"><span>1 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle1" data-components1="Column2"><span>2 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle1" data-components1="Column3"><span>3 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle1" data-components1="Column4"><span>4 Column</span></li>
-                            <li class="icon-text-input ui-sortable-handle" data-components="Text"><span>Text</span></li>
-                            <li class="icon-text-area ui-sortable-handle" data-components="Text Area"><span>Text Area</span></li>
-                            <li class="icon-radio-group ui-sortable-handle" data-components="Radio"><span>Radio</span></li>
-                            <li class="icon-checkbox ui-sortable-handle" data-components="Checkbox"><span>Checkbox</span></li>
-                            <li class="icon-select ui-sortable-handle" data-components="Select"><span>Select</span></li>
-                            <li class="icon-header ui-sortable-handle" data-components="Header"><span>Header</span></li>
-                            
+                            <li class="icon-text-input column_select" data-components1="Column1"><span>1 Column</span></li>
+                            <li class="icon-text-input  column_select" data-components1="Column2"><span>2 Column</span></li>
+                            <li class="icon-text-input  column_select" data-components1="Column3"><span>3 Column</span></li>
+                            <li class="icon-text-input  column_select" data-components1="Column4"><span>4 Column</span></li>
+                            <li class="icon-text-input component" data-components="Text"><span>Text</span></li>
+                            <li class="icon-text-area component" data-components="Text Area"><span>Text Area</span></li>
+                            <li class="icon-radio-group component" data-components="Radio"><span>Radio</span></li>
+                            <li class="icon-checkbox component" data-components="Checkbox"><span>Checkbox</span></li>
+                            <li class="icon-select component" data-components="Select"><span>Select</span></li>
+                            <li class="icon-header component" data-components="Header"><span>Header</span></li>
+                            <li class="icon-calendar component item_dragable" data-components="Date_Field"><span>Date Field</span></li>    
                         </ul>
                         <div class="form-actions btn-group"><button id="frmb-0-clear-all" type="button" class="clear-all btn btn-default">Clear</button><button id="frmb-0-view-data" type="button" class="view-data btn btn-default">&lt;/&gt;</button><button class="btn btn-primary form-builder-save" id="frmb-0-save" type="button">Save</button></div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-</html>
-<!--
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Thiết kế form Hành Chính Công</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div id="modalComponent" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/lib/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet">
-
-        <script type="text/javascript" charset="utf-8" src="assets/js/jquery.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
-    </head>
-
-    <body style="zoom: 1;">
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="brand" href="#">Thiết kế form Hành Chính Công</a>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
+
             </div>
         </div>
-        <div class="container">
-            <div class="row clearfix">
-                <div class="span8">
-                    <div class="clearfix">
-                        <h2>Form</h2>
-                        <hr>
-                        <div id="build">
-                            <form id="target" class="form-horizontal">
-                                <fieldset>
-                                    <div class="component" data-content="" data-title="Form Name" data-trigger="manual" data-html="true"> Form Name 
-                                        <legend>Tiêu đề form</legend>
-                                    </div>
-                                    <div class="component" data-content="" data-title="Text Area" data-trigger="manual" data-html="true"> Textarea 
-                                        <div class="control-group">
-                                            <label class="control-label" for="textarea-0">Text Area</label>
-                                            <div class="controls">                     
-                                                <textarea id="textarea-0" name="textarea-0">default text</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="component" data-content="" data-title="Text Input" data-trigger="manual" data-html="true"> Text input
-                                        <div class="control-group">
-                                            <label class="control-label" for="textinput-0">Text Input</label>
-                                            <div class="controls">
-                                                <input id="textinput-0" name="textinput-0" type="text" placeholder="placeholder">
-                                                <p class="help-block">help</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="span4">
-                    <h2>Kéo & thả</h2>
-                    <hr>
-                    <div class="tabbable">
-                        <form class="form-horizontal" id="components">
-                            <div class="multi_selector " id="input">
-                                <div class="component"> Text input
-                                    <div class="control-group">
-                                        <label class="control-label" for="textinput">Text Input</label>
-                                        <div class="controls">
-                                            <input id="textinput" name="textinput" type="text" placeholder="placeholder">
-                                            <p class="help-block">help</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="component"> Textarea 
-                                    <div class="control-group">
-                                        <label class="control-label" for="textarea">Text Area</label>
-                                        <div class="controls">                     
-                                            <textarea id="textarea" name="textarea">default text</textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="component">
-                                    <div class="control-group">
-                                        <label class="control-label" for="multipleradios">Multiple Radios</label>
-                                        <div class="controls">
-                                            <label class="radio" for="multipleradios-0">
-                                                <input type="radio" name="multipleradios" id="multipleradios-0" value="Option one" checked="checked">
-                                                Option one
-                                            </label>
-                                            <label class="radio" for="multipleradios-1">
-                                                <input type="radio" name="multipleradios" id="multipleradios-1" value="Option two">
-                                                Option two
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="component">
-                                    <div class="control-group">
-                                        <label class="control-label">Inline Radios</label>
-                                        <div class="controls">
-                                            <label class="radio inline" for="multipleradiosinline-0">
-                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-0" value="1" checked="checked">
-                                                1
-                                            </label>
-                                            <label class="radio inline" for="multipleradiosinline-1">
-                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-1" value="2">
-                                                2
-                                            </label>
-                                            <label class="radio inline" for="multipleradiosinline-2">
-                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-2" value="3">
-                                                3
-                                            </label>
-                                            <label class="radio inline" for="multipleradiosinline-3">
-                                                <input type="radio" name="multipleradiosinline" id="multipleradiosinline-3" value="4">
-                                                4
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="component">
-                                    <div class="control-group">
-                                        <label class="control-label">Multiple Checkboxes</label>
-                                        <div class="controls">
-                                            <label class="checkbox" for="multiplecheckboxes-0">
-                                                <input type="checkbox" name="multiplecheckboxes" id="multiplecheckboxes-0" value="Option one">
-                                                Option one
-                                            </label>
-                                            <label class="checkbox" for="multiplecheckboxes-1">
-                                                <input type="checkbox" name="multiplecheckboxes" id="multiplecheckboxes-1" value="Option two">
-                                                Option two
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="component">
-                                    <div class="control-group">
-                                        <label class="control-label">Inline Checkboxes</label>
-                                        <div class="controls">
-                                            <label class="checkbox inline" for="multiplecheckboxesinline-0">
-                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-0" value="1">
-                                                1
-                                            </label>
-                                            <label class="checkbox inline" for="multiplecheckboxesinline-1">
-                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-1" value="2">
-                                                2
-                                            </label>
-                                            <label class="checkbox inline" for="multiplecheckboxesinline-2">
-                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-2" value="3">
-                                                3
-                                            </label>
-                                            <label class="checkbox inline" for="multiplecheckboxesinline-3">
-                                                <input type="checkbox" name="multiplecheckboxesinline" id="multiplecheckboxesinline-3" value="4">
-                                                4
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="component"> Select Basic 
-                                    <div class="control-group">
-                                        <label class="control-label" for="selectbasic">Select</label>
-                                        <div class="controls">
-                                            <select id="selectbasic" name="selectbasic">
-                                                <option>Option one</option>
-                                                <option>Option two</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="component"> Button 
-                                    <div class="control-group">
-                                        <label class="control-label" for="singlebutton">Button</label>
-                                        <div class="controls">
-                                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                 / Components 
-
-            </div>
-
-            <div class="row clearfix">
-                <div class="span12">
-                    <hr>
-                    Hành Chính Công<br>
-                </div>
-            </div>
-
-        </div>  /container 
-
-
     </body>
-</html>-->
+</html>
