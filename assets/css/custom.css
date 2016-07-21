@@ -59,3 +59,19 @@ textarea {
 .column_sel {
     padding: 10px 0px;
 }
+.box_icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+}
+.box_compnent:hover .box_icon{
+    display: block;
+}
+
+
+/*.box_icon i {
+    border: 1px solid #b1b1b1;
+    padding: 4px 6px;
+    border-radius: 4px;
+}*/
