@@ -13,7 +13,7 @@ body {
     border: 3px dotted #ccc;
     /*margin-right: 5px;*/
     background-color: rgba(255,255,255,.25);
-    min-height: 430px;
+    min-height: 447px;
 }
 div.droppable {
     width: 100%;

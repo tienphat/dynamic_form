@@ -10,18 +10,10 @@ $(document).ready(function () {
             components = $(this).attr('data-components1');
             switch (components) {
                 case 'Column1':
-
                     myarr.column = '<div class="row"><div class="col-md-12 column_sel"></div></div>';
-
                     break;
                 case 'Column2':
                     myarr.column = '<div class="row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div></div>';
-                    break;
-                case 'Column3':
-                    myarr.column = '<div class="row"><div class="col-md-4 column_sel"></div><div class="col-md-4 column_sel"></div><div class="col-md-4 column_sel"></div></div>';
-                    break;
-                case 'Column4':
-                    myarr.column = '<div class="row"><div class="col-md-3 column_sel"></div><div class="col-md-3 column_sel"></div><div class="col-md-3 column_sel"></div><div class="col-md-3 column_sel"></div></div>';
                     break;
                 default:
                     myarr.column = '<div class="col-md-12 column_sel"></div>';
@@ -45,8 +37,8 @@ $(document).ready(function () {
                     break;
                 case 'Text Area':
                     myarr.component = '<div class="form-group">';
-                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Textarea</label>  ';
-                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '    <label class="col-md-12 control-label" for="textinput">Textarea</label>  ';
+                    myarr.component += '    <div class="col-md-12">';
                     myarr.component += '         <textarea name="" class="form-control"  id="" cols="10" rows="3"></textarea>';
                     myarr.component += '    </div>';
                     myarr.component += '</div>';
