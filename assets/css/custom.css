@@ -192,3 +192,7 @@ label {
     padding: 10px 0px 0px 0px;
     border: 1px dashed #cccccc;
 }
+.input_title{
+   padding-bottom: 30px;
+   margin-bottom: 30px;
+}

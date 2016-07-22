@@ -117,6 +117,7 @@ $(document).ready(function () {
         drop: function () {
             $('.dropable').append(myarr.column);
             set_drop();
+            edit_header();
             hover_row_component();
         }
     });
@@ -190,17 +191,17 @@ $(document).ready(function () {
     function edit_header() {
         $('.title').each(function () {
             var val_old = $(this).text();
-            var html = '<div class="col-md-6 col-md-offset-3"><h3><input type="text" class="form-control input_title" value="' + val_old + '" / ><h3></div';
+            var html = '<div class="col-md-6 col-md-offset-3"><h3><input type="text" class="form-control input_title" value="' + val_old + '" / ></h3></div';
             set_val(val_old);
 
             $(this).click(function () {
                 $('.header').html(html);
                 $('.input_title').focus();
-                $('.input_title').blur(function () {
-                    var val_new = $(this).val();
-                    $('.header').html(set_val(val_new));
-                    edit_header();
-                });
+//                $('.input_title').blur(function () {
+//                    var val_new = $(this).val();
+//                    $('.header').html(set_val(val_new));
+//                    edit_header();
+//                });
                 $('.input_title').keyup(function (e) {
                     if (e.keyCode === 13)
                     {
