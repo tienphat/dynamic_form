@@ -175,5 +175,14 @@ $(document).ready(function () {
        $('.dropable').html(html); 
        set_drop();
     });
+    $('.title').dblclick(function (){
+        var val = $('.title').text();
+        var html = '<div class="col-md-4 col-md-offset-4 title_header"><input type="text" class="form-control input_title" value="' + val + '" / ></div>';
+        $('.header').html(html);
+        
+    });
+   $( ".input_title" ).bind('change',function(){
+           alert( "Handler for .change() called." );
+         });
 });
 
