@@ -83,7 +83,6 @@ textarea {
     padding: 5px 37px;
 }
 .column_sel {
-    /* padding: 10px 0px; */
 }
 .box_icon {
     position: absolute;
@@ -104,6 +103,9 @@ textarea {
 .header:hover .box_icon{
     display: block;
 }
+label {
+    padding-top: 8px;
+}
 .title_header{
     margin-top: 20px;
     margin-bottom: 10px;
@@ -111,7 +113,3 @@ textarea {
 .header {
     text-transform: uppercase;
 }
-.title{
-    /*width: 60%;*/
-}
-
