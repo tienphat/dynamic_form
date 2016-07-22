@@ -74,8 +74,8 @@ body {
     border: 2px solid #f1ebeb;
     /*margin-right: 5px;*/
     background-color: rgba(255,255,255,.25);
-    min-height: 800px;
-    height: 800px;
+    /*min-height: 800px;*/
+    /*height: 800px;*/
 }
 div.droppable {
     width: 100%;
@@ -203,4 +203,29 @@ label {
 }
 .component_row {
     padding: 10px 25px 0px 25px;
+}
+@media (min-height: 1100px) { 
+    .page_left {
+        height: 1000px;
+    }
+}
+@media (min-height: 1000px) { 
+    .page_left {
+        height: 900px;
+    }
+}
+@media (min-height: 800px) { 
+    .page_left {
+        height: 700px;
+    }
+}
+@media (min-height: 700px) { 
+    .page_left {
+        height: 600px;
+    }
+}
+@media (min-height: 600px) { 
+    .page_left {
+        height: 500px;
+    }
 }
