@@ -177,18 +177,23 @@ $(document).ready(function () {
        set_drop();
     });
     
-    edit_header();
+//    edit_header();
     
     function edit_header() {
         $('.title').dblclick(function (){
-            var val = $(this).text();
+            val = $(this).text();
+            console.log(val);
             var html = '<input type="text" class="form-control input_title" value="' + val + '" / >';
             $(this).html(html);
             $(this).focus();
             $(".input_title").blur(function() {
-                values_text = $('.input_title').val();
-                if(values_text === ''){
+                values_text = $(this).val();
+                if(values_text === '' && val != ''){
                     $( this ).parent( ".title" ).html(val);
+                }
+                if(values_text === '' && val === ''){
+                    $( this ).parent( ".title" ).html('Rỗng');
+                
                 }
                 else{
                     $( this ).parent( ".title" ).html(values_text);
