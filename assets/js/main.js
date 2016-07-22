@@ -10,26 +10,22 @@ $(document).ready(function () {
         start: function () {
             components = $(this).attr('data-column');
             switch (components) {
-//                case 'Column1':
-//                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel"></div><div class ="icon_row">';
-//                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
-//                    break;
                 case 'Column1':
                     myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
                     myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
                     break;
                 case 'Header':
-                    alert(1);
-                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel">'
+                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel">';
                     myarr.column += '<div class="box_component fieldset_head">';
                     myarr.column += '    <div class="col-md-12 box_header">';
                     myarr.column += '         <h4><label class="head_fieldset col-md-12">This is a label</label></h4>';
                     myarr.column += '    </div>';
                     myarr.column += '    <div class ="box_icon">';
-                    myarr.column += '     <button class="btn btn-default btnDelete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.column += '     <button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.column += '</div></div></div>';
+                    break; 
                 default:
-                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel"></div><div class ="icon_row">';
+                    myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
                     myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
                     break;
             }
@@ -129,9 +125,8 @@ $(document).ready(function () {
 
     function set_drop() {
         $('.column_sel').droppable({
-            accept: '.component',
             drop: function () {
-                if ($(this).children().length <= 1) {
+                if ($(this).children().length <= 0) {
                     $(this).append(myarr.component);
                 }
                 $('.btn_edit').click(function () {
