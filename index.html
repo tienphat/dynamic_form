@@ -10,18 +10,18 @@
         <link href="assets/css/custom.css" rel="stylesheet">
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" charset="utf-8" src="assets/libs/datepicker.css"></script>
-        
+
         <script type="text/javascript" charset="utf-8" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/formbuilder.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/jquery-ui.min.js"></script>
-        
+
         <script type="text/javascript" charset="utf-8" src="assets/libs/bootstrap-datepicker.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/libs/locales/bootstrap-datepicker.vi.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/main.js" ></script>
     </head>
 
-    <body style="cursor: auto;margin-top:60px;">
+    <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="container form_designed">
-            
+
         </div>
         <div id="modalComponent" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -80,52 +80,48 @@
                         <h4 class="modal-title">Modal Header</h4>
                     </div>
                     <div class="modal-body">
-                            <div class="form-group">
-                                <label class="col-md-12 control-label"> ID / Name </label>
-                                <div class="col-md-12">
-                                    <input class="form-control field" data-type="input" type="text" name="id" id="id" value="textinput">
-                                </div>
-                            </div><div class="form-group">
-                                <label class="col-md-12 control-label"> Label Text </label>
-                                <div class="col-md-12">
-                                    <input class="form-control field" data-type="input" type="text" name="label" id="label" value="Text Input">
-                                </div>
-                            </div><div class="form-group">
-                                <label class="col-md-12 control-label"> Placeholder </label>
-                                <div class="col-md-12">
-                                    <input class="form-control field" data-type="input" type="text" name="placeholder" id="placeholder" value="placeholder">
-                                </div>
-                            </div><div class="form-group">
-                                <label class="col-md-12 control-label"> Help Text </label>
-                                <div class="col-md-12">
-                                    <input class="form-control field" data-type="input" type="text" name="helptext" id="helptext" value="help">
-                                </div>
-                            </div><div class="checkbox">
-                                <div class="col-md-12">
-                                    <label>
-                                        <input type="checkbox" data-type="checkbox" class="field" name="required" id="required">
-                                        Required
-                                    </label>
-                                </div>
+                        <div class="form-group">
+                            <label class="col-md-12 control-label"> ID / Name </label>
+                            <div class="col-md-12">
+                                <input class="form-control field" data-type="input" type="text" name="id" id="id" value="textinput">
                             </div>
-                            <div class="form-group">
-                                <label class="col-md-4 control-label"> Input Size </label>
-                                <div class="col-md-8">
-                                    <select class="form-control field" data-type="select" id="inputsize">
-                                        <option value="col-md-1">Mini</option>
-                                        <option value="col-md-2">Small</option>
-                                        <option value="col-md-4" selected="">Medium</option>
-                                        <option value="col-md-5">Large</option>
-                                        <option value="col-md-6">Xlarge</option>
-                                        <option value="col-md-8">Xxlarge</option>
-                                    </select>
-                                </div>
+                        </div><div class="form-group">
+                            <label class="col-md-12 control-label"> Label Text </label>
+                            <div class="col-md-12">
+                                <input class="form-control field" data-type="input" type="text" name="label" id="label" value="Text Input">
                             </div>
-                            <hr>
-                            <div class="form-group box_button text-center">
-                                <button id="save" class="btn btn-info btnSave">Lưu</button>&nbsp;
-                                <button id="cancel" class="btn btn-danger">Hủy</button>
+                        </div><div class="form-group">
+                            <label class="col-md-12 control-label"> Placeholder </label>
+                            <div class="col-md-12">
+                                <input class="form-control field" data-type="input" type="text" name="placeholder" id="placeholder" value="placeholder">
                             </div>
+                        </div>
+                        <div class="checkbox">
+                            <div class="col-md-12">
+                                <label>
+                                    <input type="checkbox" data-type="checkbox" class="field" name="required" id="required">
+                                    Required
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label"> Input Size </label>
+                            <div class="col-md-8">
+                                <select class="form-control field" data-type="select" id="inputsize">
+                                    <option value="col-md-1">Mini</option>
+                                    <option value="col-md-2">Small</option>
+                                    <option value="col-md-4" selected="">Medium</option>
+                                    <option value="col-md-5">Large</option>
+                                    <option value="col-md-6">Xlarge</option>
+                                    <option value="col-md-8">Xxlarge</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group box_button text-center">
+                            <button id="save" class="btn btn-info btnSave">Lưu</button>&nbsp;
+                            <button id="cancel" class="btn btn-danger">Hủy</button>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

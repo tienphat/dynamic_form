@@ -2,6 +2,8 @@ body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
     padding-bottom: 10px;
     position: relative;
+    cursor: auto;
+    margin-top:20px;
 }
 
 @media (max-width: 979px) {
@@ -13,7 +15,7 @@ body {
     border: 3px dotted #ccc;
     /*margin-right: 5px;*/
     background-color: rgba(255,255,255,.25);
-    min-height: 447px;
+    min-height: 800px;
 }
 div.droppable {
     width: 100%;
@@ -91,6 +93,13 @@ textarea {
 }
 .box_component:hover .box_icon{
     display: block;
+}
+.box_component h4 {
+    margin: 0px;
+}
+
+.box_component {
+    padding: 5px 0px;
 }
 .header:hover .box_icon{
     display: block;
