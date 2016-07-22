@@ -10,6 +10,48 @@
     font-family: myriad cond;
     src: url(../fonts/Myriad-Pro-Condensed.ttf);
 }
+/*Open Sans*/
+h1 {
+	font-family: "Open Sans";
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+h3 {
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+}
+p {
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+blockquote {
+	font-family: "Open Sans";
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: "Open Sans";
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+
 /*---------------body------------------*/
 body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -75,7 +117,7 @@ textarea {
 .control-label {
     text-align: right;
 }
-
+.header h3 {font-size: 29px;}
 .fieldset_head {
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
@@ -83,28 +125,6 @@ textarea {
     min-height: 48px;
     text-transform: uppercase;
     margin-top: 1px;
-}
-.datepicker .day.old {
-    color: #a9a7a7;
-}
-.datepicker .day.active {
-    background: #337ab7;
-    color: #fff;
-}
-.datepicker th.switch {
-    text-align: center;
-}
-.datepicker .day.today.active {
-    background: #c7c72f;
-    color: #211;
-    border-radius: 4px;
-}
-.datepicker .day:hover {
-    cursor: pointer;
-}
-.datepicker .day,.datepicker .dow {
-    font-size: 15px;
-    padding: 5px 5px 5px 8px;
 }
 .column_sel h4 {
     margin: 0px;
@@ -148,11 +168,22 @@ label {
     text-transform: uppercase;
     font-family: "myriad bold";
     font-size: 29px;
+    min-height: 54px;
 }
-.fieldset_head .input_title {
-    font-size: 20px;
-    margin-top: -5px;
+.fieldset_head .input_fieldset {
+    font-family: "myriad cond";
+    font-size: 22px;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+.fieldset_head h3 {
+    font-family: "myriad cond";
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-transform: uppercase;
 }
 .fieldset_head .title {
     padding: 2px;
 }
+

@@ -81,8 +81,8 @@ $(document).ready(function () {
                     break;
                 case 'Header':
                     myarr.component = '<div class="box_component fieldset_head">';
-                    myarr.component += '    <div class="col-md-12">';
-                    myarr.component += '         <h4><label class="title col-md-12">This is a label</label></h4>';
+                    myarr.component += '    <div class="col-md-12 box_header">';
+                    myarr.component += '         <h4><label class="head_fieldset col-md-12">This is a label</label></h4>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon">';
                     myarr.component += '     <button class="btn btn-default btnDelete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
@@ -108,7 +108,7 @@ $(document).ready(function () {
         drop: function () {
             $('.dropable').append(myarr.column);
             set_drop();
-            
+
         }
     });
 
@@ -167,48 +167,85 @@ $(document).ready(function () {
             });
         });
     }
-    
-    $('.btnClear').click(function(){
+
+    $('.btnClear').click(function () {
         var html = '<div class="row">';
-            html += '   <div class="col-md-12 column_sel ui-droppable">';
-            html += '   </div>';
-            html += '</div>';
-       $('.dropable').html(html); 
-       set_drop();
+        html += '   <div class="col-md-12 column_sel ui-droppable">';
+        html += '   </div>';
+        html += '</div>';
+        $('.dropable').html(html);
+        set_drop();
     });
     
-    edit_header();
     
+    
+    edit_header();
     function edit_header() {
-        $('.title').dblclick(function (){
-            var val = $(this).text();
-            var html = '<input type="text" class="form-control input_title" value="' + val + '" / >';
-            $(this).html(html);
-            $(this).focus();
-            $(".input_title").blur(function() {
-                values_text = $('.input_title').val();
-                if(values_text === ''){
-                    $( this ).parent( ".title" ).html(val);
-                }
-                else{
-                    $( this ).parent( ".title" ).html(values_text);
-                }
+        $('.title').each(function () {
+            var val_old = $(this).text();
+            var html = '<div class="col-md-6 col-md-offset-3"><h3><input type="text" class="form-control input_title" value="' + val_old + '" / ><h3></div';
+            set_val(val_old);
+            
+            $(this).click(function () {
+                $('.header').html(html);
+                $('.input_title').focus();
+                $('.input_title').blur(function(){
+                    var val_new = $(this).val();
+                    $('.header').html(set_val(val_new));
+                    edit_header();
+                });
+                $('.input_title').keyup(function(e){
+                    if(e.keyCode === 13)
+                    {
+                        var val_keyup = $(this).val();
+                        if (val_keyup === '') {
+                            $('.header').html(set_val(val_old));
+                        }
+                        else {
+                            $('.header').html(set_val(val_keyup));
+                        }
+                    }
+                    edit_header();
+                });
             });
-             $('.input_title').keyup(function(e){
-                if(e.keyCode === 13)
-                {
-                    values_text = $('.input_title').val();
-                    console.log(values_text);
-                    if(values_text === ''){
-                        $( this ).parent( ".title" ).html(val);
+        });
+        $('.head_fieldset').each(function(){
+            var val_old = $(this).text();
+            var html = '<div class="col-md-12"><input type="text" class="form-control input_fieldset" value="' + val_old + '" / ></div';
+            set_val_fieldset(val_old);
+            
+            $(this).click(function () {
+                $(this).parents('.box_header').html(html);
+                $('.input_fieldset').focus();
+                $('.input_fieldset').blur(function(){
+                    var val_new = $(this).val();
+                    $(this).parents('.box_header').html(set_val_fieldset(val_new));
+                    edit_header();
+                });
+                $('.input_fieldset').keyup(function(e){
+                    if(e.keyCode === 13)
+                    {
+                        var val_keyup = $(this).val();
+                        if (val_keyup === '') {
+                            $(this).parents('.box_header').html(set_val_fieldset(val_old));
+                        }
+                        else {
+                            $(this).parents('.box_header').html(set_val_fieldset(val_keyup));
+                        }
                     }
-                    else{
-                        $( this ).parent( ".title" ).html(values_text);
-                    }
-                }
+                    edit_header();
+                });
             });
         });
     }
-    
+    function set_val(value){
+        var html = '<h3 class=""><label class="title col-md-8 col-md-offset-2">' + value + '</label></h3>';
+        return html;
+    };
+    function set_val_fieldset(value){
+        var html = '<h4><label class="head_fieldset col-md-12">' + value + '</label></h4>';
+        return html;
+    }
+
 });
 
