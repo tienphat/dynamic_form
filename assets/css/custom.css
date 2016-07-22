@@ -1,3 +1,16 @@
+@font-face {
+    font-family: myriad reg;
+    src: url(../fonts/Myriad-Pro-Regular.ttf);
+}
+@font-face {
+    font-family: myriad bold;
+    src: url(../fonts/Myriad-Pro.ttf);
+}
+@font-face {
+    font-family: myriad cond;
+    src: url(../fonts/Myriad-Pro-Condensed.ttf);
+}
+/*---------------body------------------*/
 body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
     padding-bottom: 10px;
@@ -59,25 +72,42 @@ textarea {
 .page_left{
         padding-left: 30px;
 }
+.control-label {
+    text-align: right;
+}
 
+.fieldset_head {
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    padding: 0px !important;
+    min-height: 41px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
 .datepicker .day.old {
     color: #a9a7a7;
 }
-
-.datepicker .day.today.active {
+.datepicker .day.active {
     background: #337ab7;
     color: #fff;
+}
+.datepicker th.switch {
+    text-align: center;
+}
+.datepicker .day.today.active {
+    background: #c7c72f;
+    color: #211;
     border-radius: 4px;
 }
 .datepicker .day:hover {
     cursor: pointer;
 }
-.datepicker .day {
+.datepicker .day,.datepicker .dow {
     font-size: 15px;
+    padding: 5px 5px 5px 8px;
 }
 .column_sel h4 {
     margin: 0px;
-    border-bottom: 1px solid gray;
 }
 .box_button button {
     padding: 5px 37px;
@@ -109,4 +139,8 @@ label {
 .title_header{
     margin-top: 20px;
     margin-bottom: 10px;
+}
+.fieldset_head h4 {font-family: "myriad cond";font-size: 26px;}
+.fieldset_head label {
+    padding: 5px;
 }

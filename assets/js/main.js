@@ -80,7 +80,7 @@ $(document).ready(function () {
                     myarr.component += '</div>';
                     break;
                 case 'Header':
-                    myarr.component = '<div class="box_component">';
+                    myarr.component = '<div class="box_component fieldset_head">';
                     myarr.component += '    <div class="col-md-12">';
                     myarr.component += '         <h4><label>This is a label</label></h4>';
                     myarr.component += '    </div>';
@@ -90,8 +90,8 @@ $(document).ready(function () {
                     break;
                 case 'Date_Field':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Ngày</label>  ';
-                    myarr.component += '    <div class="col-md-10">';
+                    myarr.component += '    <label class="col-md-3 control-label" for="textinput">Ngày tháng</label>  ';
+                    myarr.component += '    <div class="col-md-9">';
                     myarr.component += '         <input type="text" placeholder="Ngày/tháng/năm" class="form-control selDate"  name="" id="" value=""/>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
