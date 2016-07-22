@@ -10,14 +10,24 @@ $(document).ready(function () {
         start: function () {
             components = $(this).attr('data-column');
             switch (components) {
-                case 'Column1':
-                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel"></div><div class ="icon_row">';
-                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
-                    break;
-//                case 'Column2':
-//                    myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
+//                case 'Column1':
+//                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel"></div><div class ="icon_row">';
 //                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
 //                    break;
+                case 'Column1':
+                    myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
+                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
+                    break;
+                case 'Header':
+                    alert(1);
+                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel">'
+                    myarr.column += '<div class="box_component fieldset_head">';
+                    myarr.column += '    <div class="col-md-12 box_header">';
+                    myarr.column += '         <h4><label class="head_fieldset col-md-12">This is a label</label></h4>';
+                    myarr.column += '    </div>';
+                    myarr.column += '    <div class ="box_icon">';
+                    myarr.column += '     <button class="btn btn-default btnDelete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
+                    myarr.column += '</div></div></div>';
                 default:
                     myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel"></div><div class ="icon_row">';
                     myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
@@ -32,8 +42,8 @@ $(document).ready(function () {
             switch (components) {
                 case 'Text':
                     myarr.component = '<div class="box_component com_input">';
-                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Label</label>  ';
-                    myarr.component += '    <div class="col-md-4">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Label</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
                     myarr.component += '         <input type="text" class="form-control" name="" id="" value=""/></span><br>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
@@ -42,8 +52,8 @@ $(document).ready(function () {
                     break;
                 case 'Text Area':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Label</label>  ';
-                    myarr.component += '    <div class="col-md-4">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Label</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
                     myarr.component += '         <textarea name="" class="form-control"  id="" cols="10" rows="3"></textarea>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
@@ -52,8 +62,8 @@ $(document).ready(function () {
                     break;
                 case 'Radio':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Label</label>  ';
-                    myarr.component += '    <div class="col-md-4">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Label</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
                     myarr.component += '         <ul class="list-unstyled"><li><label><input type="radio"  name="radExample" id="" value="1" checked="checked"/>Radio</label></li>';
                     myarr.component += '               </ul>';
                     myarr.component += '    </div>';
@@ -63,8 +73,8 @@ $(document).ready(function () {
                     break;
                 case 'Checkbox':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Label</label>  ';
-                    myarr.component += '    <div class="col-md-4">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Label</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
                     myarr.component += '         <ul class="list-unstyled"><li><label><input type="checkbox" name="" id="" value="1" checked/>Checkbox</label></li>';
                     myarr.component += '                </ul>';
                     myarr.component += '    </div>';
@@ -74,8 +84,8 @@ $(document).ready(function () {
                     break;
                 case 'Select':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Label</label>  ';
-                    myarr.component += '    <div class="col-md-4">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Label</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
                     myarr.component += '         <select name="" class="form-control" ><option value="1">Option1</option><option value="2">Option2</option></select>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
@@ -93,8 +103,8 @@ $(document).ready(function () {
                     break;
                 case 'Date_Field':
                     myarr.component = '<div class="box_component">';
-                    myarr.component += '    <label class="col-md-2 control-label" for="textinput">Ngày tháng</label>  ';
-                    myarr.component += '    <div class="col-md-4">';
+                    myarr.component += '    <label class="col-md-4 control-label" for="textinput">Ngày tháng</label>  ';
+                    myarr.component += '    <div class="col-md-8">';
                     myarr.component += '         <input type="text" placeholder="Ngày/tháng/năm" class="form-control selDate"  name="" id="" value=""/>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
