@@ -108,4 +108,10 @@ textarea {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+.header {
+    text-transform: uppercase;
+}
+.title{
+    /*width: 60%;*/
+}
 
