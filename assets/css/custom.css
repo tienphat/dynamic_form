@@ -59,7 +59,7 @@ textarea {
 .page_left{
         padding-left: 30px;
 }
-//datepicker
+
 .datepicker .day.old {
     color: #a9a7a7;
 }
@@ -75,7 +75,6 @@ textarea {
 .datepicker .day {
     font-size: 15px;
 }
-//end datepicker
 .column_sel h4 {
     margin: 0px;
     border-bottom: 1px solid gray;
@@ -106,4 +105,8 @@ textarea {
 }
 label {
     padding-top: 8px;
+}
+.title_header{
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
