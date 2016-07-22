@@ -181,9 +181,10 @@ $(document).ready(function () {
     
     function edit_header() {
         $('.title').dblclick(function (){
-            var val = $('.title').text();
+            var val = $(this).text();
             var html = '<input type="text" class="form-control input_title" value="' + val + '" / >';
             $(this).html(html);
+            $(this).focus();
             $(".input_title").blur(function() {
                 values_text = $('.input_title').val();
                 if(values_text === ''){
@@ -191,6 +192,19 @@ $(document).ready(function () {
                 }
                 else{
                     $( this ).parent( ".title" ).html(values_text);
+                }
+            });
+             $('.input_title').keyup(function(e){
+                if(e.keyCode === 13)
+                {
+                    values_text = $('.input_title').val();
+                    console.log(values_text);
+                    if(values_text === ''){
+                        $( this ).parent( ".title" ).html(val);
+                    }
+                    else{
+                        $( this ).parent( ".title" ).html(values_text);
+                    }
                 }
             });
         });
