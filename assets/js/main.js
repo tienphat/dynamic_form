@@ -28,7 +28,7 @@ $(document).ready(function () {
             components = $(this).attr('data-components');
             switch (components) {
                 case 'Text':
-                    myarr.component = '<div class="box_component">';
+                    myarr.component = '<div class="box_component com_input">';
                     myarr.component += '    <label class="col-md-3 control-label" for="textinput">Text Input</label>  ';
                     myarr.component += '    <div class="col-md-9">';
                     myarr.component += '         <input type="text" class="form-control" name="" id="" value=""/></span><br>';
