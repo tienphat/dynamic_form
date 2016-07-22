@@ -11,7 +11,7 @@ $(document).ready(function () {
             components = $(this).attr('data-column');
             switch (components) {
                 case 'Column1':
-                    myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
+                    myarr.column = '<div class="row col_com component_row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
                     myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
                     break;
                 case 'Header':
@@ -23,7 +23,7 @@ $(document).ready(function () {
                     myarr.column += '    <div class ="box_icon">';
                     myarr.column += '     <button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.column += '</div></div></div>';
-                    break; 
+                    break;
                 default:
                     myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
                     myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
@@ -119,6 +119,7 @@ $(document).ready(function () {
             set_drop();
             edit_header();
             hover_row_component();
+            edit_header();
         }
     });
 
@@ -176,14 +177,17 @@ $(document).ready(function () {
             });
         });
     }
-
     $('.btnClear').click(function () {
-        var html = '<div class="row">';
-        html += '   <div class="col-md-12 column_sel ui-droppable">';
-        html += '   </div>';
-        html += '</div>';
-        $('.dropable').html(html);
-        set_drop();
+        var message = 'Bạn có chắc chắn muốn xóa không?';
+        if (confirm(message)) {
+            var html = '<div class="row">';
+            html += '   <div class="col-md-12 column_sel ui-droppable">';
+            html += '   </div>';
+            html += '</div>';
+            $('.dropable').html(html);
+            set_drop();
+//                $(this).prev('span.text').remove();
+        }
     });
 
 //    edit header    
@@ -191,7 +195,8 @@ $(document).ready(function () {
     function edit_header() {
         $('.title').each(function () {
             var val_old = $(this).text();
-            var html = '<div class="col-md-6 col-md-offset-3"><h3><input type="text" class="form-control input_title" value="' + val_old + '" / ></h3></div';
+
+            var html = '<div class="col-md-6 col-md-offset-3 title_page"><h3><input type="text" class="form-control input_title" value="' + val_old + '" / ></h3></div';
             set_val(val_old);
 
             $(this).click(function () {
@@ -278,11 +283,6 @@ $(document).ready(function () {
             });
         });
     }
-    
-    //Get width col-md-6
-//    
-//    alert($('.col_com .col-md-6').find('label.control-label').width());
-
 
 });
 
