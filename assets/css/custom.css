@@ -79,10 +79,10 @@ textarea {
 .fieldset_head {
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
-    padding: 0px !important;
-    min-height: 41px;
+    padding: 3px !important;
+    min-height: 48px;
     text-transform: uppercase;
-    margin-top: 4px;
+    margin-top: 1px;
 }
 .datepicker .day.old {
     color: #a9a7a7;
@@ -142,5 +142,17 @@ label {
 }
 .fieldset_head h4 {font-family: "myriad cond";font-size: 26px;}
 .fieldset_head label {
-    padding: 5px;
+    padding: 6px !important;
+}
+.header {
+    text-transform: uppercase;
+    font-family: "myriad bold";
+    font-size: 29px;
+}
+.fieldset_head .input_title {
+    font-size: 20px;
+    margin-top: -5px;
+}
+.fieldset_head .title {
+    padding: 2px;
 }

@@ -82,9 +82,9 @@ $(document).ready(function () {
                 case 'Header':
                     myarr.component = '<div class="box_component fieldset_head">';
                     myarr.component += '    <div class="col-md-12">';
-                    myarr.component += '         <h4><label>This is a label</label></h4>';
+                    myarr.component += '         <h4><label class="title col-md-12">This is a label</label></h4>';
                     myarr.component += '    </div>';
-                    myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
+                    myarr.component += '    <div class ="box_icon">';
                     myarr.component += '     <button class="btn btn-default btnDelete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
                     myarr.component += '</div>';
                     break;
@@ -126,6 +126,7 @@ $(document).ready(function () {
                 });
                 selDate('.selDate');
                 delComponent();
+                edit_header();
 
             }
         });
@@ -149,7 +150,7 @@ $(document).ready(function () {
             minDate: true,
             changeYear: true,
             todayHighlight: true,
-            autoclose: true,
+            autoclose: true
         });
     }
 
@@ -175,14 +176,25 @@ $(document).ready(function () {
        $('.dropable').html(html); 
        set_drop();
     });
-    $('.title').dblclick(function (){
-        var val = $('.title').text();
-        var html = '<div class="col-md-4 col-md-offset-4 title_header"><input type="text" class="form-control input_title" value="' + val + '" / ></div>';
-        $('.header').html(html);
-        
-    });
-   $( ".input_title" ).bind('change',function(){
-           alert( "Handler for .change() called." );
-         });
+    
+    edit_header();
+    
+    function edit_header() {
+        $('.title').dblclick(function (){
+            var val = $('.title').text();
+            var html = '<input type="text" class="form-control input_title" value="' + val + '" / >';
+            $(this).html(html);
+            $(".input_title").blur(function() {
+                values_text = $('.input_title').val();
+                if(values_text === ''){
+                    $( this ).parent( ".title" ).html(val);
+                }
+                else{
+                    $( this ).parent( ".title" ).html(values_text);
+                }
+            });
+        });
+    }
+    
 });
 
