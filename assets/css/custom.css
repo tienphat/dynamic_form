@@ -10,6 +10,10 @@
     font-family: myriad cond;
     src: url(../fonts/Myriad-Pro-Condensed.ttf);
 }
+@font-face {
+    font-family: Open Sans;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
 /*Open Sans*/
 h1 {
 	font-family: "Open Sans";
@@ -108,14 +112,10 @@ textarea {
     height: 30px;     
 }
 .column_sel{
-    min-height: 50px;
-    border: 1px dashed #cccccc;
+    min-height: 40px;
 }
 .page_left{
         padding-left: 30px;
-}
-.control-label {
-    text-align: right;
 }
 .header h3 {font-size: 29px;}
 .fieldset_head {
@@ -124,7 +124,7 @@ textarea {
     padding: 3px !important;
     min-height: 48px;
     text-transform: uppercase;
-    margin-top: 1px;
+    margin-top: -8px;
 }
 .column_sel h4 {
     margin: 0px;
@@ -134,7 +134,7 @@ textarea {
 }
 .column_sel {
 }
-.box_icon {
+.box_icon,.icon_row {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -148,7 +148,7 @@ textarea {
 }
 
 .box_component {
-    padding: 5px 0px;
+    /* padding: 5px 0px 0px 0px; */
 }
 .header:hover .box_icon{
     display: block;
@@ -186,4 +186,9 @@ label {
 .fieldset_head .title {
     padding: 2px;
 }
-
+.box_component label.control-label {font-family: "myriad bold";}
+.col_com {
+    position: relative;
+    padding: 10px 0px 0px 0px;
+    border: 1px dashed #cccccc;
+}
