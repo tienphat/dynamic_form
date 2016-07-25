@@ -202,11 +202,11 @@ $(document).ready(function () {
             $(this).click(function () {
                 $('.header').html(html);
                 $('.input_title').focus();
-//                $('.input_title').blur(function () {
-//                    var val_new = $(this).val();
-//                    $('.header').html(set_val(val_new));
-//                    edit_header();
-//                });
+                $('.input_title').blur(function () {
+                    var val_new = $(this).val();
+                    $('.header').html(set_val(val_new));
+                    edit_header();
+                });
                 $('.input_title').keyup(function (e) {
                     if (e.keyCode === 13)
                     {

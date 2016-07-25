@@ -204,27 +204,32 @@ label {
 .component_row {
     padding: 10px 25px 0px 25px;
 }
-@media (min-height: 1100px) { 
+@media screen and (max-width: 1400px) { 
+    .page_left {
+        height: 1100px;
+    }
+}
+@media screen and (max-width: 1100px) { 
     .page_left {
         height: 1000px;
     }
 }
-@media (min-height: 1000px) { 
+@media screen and (max-width: 1000px) { 
     .page_left {
         height: 900px;
     }
 }
-@media (min-height: 800px) { 
+@media screen and (max-width: 800px) { 
     .page_left {
         height: 700px;
     }
 }
-@media (min-height: 700px) { 
+@media screen and (max-width: 700px) { 
     .page_left {
         height: 600px;
     }
 }
-@media (min-height: 600px) { 
+@media screen and (max-width: 600px) { 
     .page_left {
         height: 500px;
     }
