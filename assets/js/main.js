@@ -254,7 +254,7 @@ $(document).ready(function () {
         var html = '<h3 class=""><label class="title col-md-8 col-md-offset-2">' + value + '</label></h3>';
         return html;
     }
-    ;
+
     function set_val_fieldset(value) {
         var html = '<h4><label class="head_fieldset col-md-12">' + value + '</label></h4>';
         return html;
