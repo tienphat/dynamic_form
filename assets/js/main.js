@@ -11,22 +11,22 @@ $(document).ready(function () {
             components = $(this).attr('data-column');
             switch (components) {
                 case 'Column1':
-                    myarr.column = '<div class="row col_com component_row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
-                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
+                    myarr.column = '<li><div class="row col_com component_row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
+                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></li>';
                     break;
                 case 'Header':
-                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel">';
+                    myarr.column = '<li><div class="row col_com"><div class="col-md-12 column_sel">';
                     myarr.column += '<div class="box_component fieldset_head">';
                     myarr.column += '    <div class="col-md-12 box_header">';
                     myarr.column += '         <h4><label class="head_fieldset col-md-12">This is a label</label></h4>';
                     myarr.column += '    </div>';
                     myarr.column += '    <div class ="box_icon">';
                     myarr.column += '     <button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
-                    myarr.column += '</div></div></div>';
+                    myarr.column += '</div></div></div></li>';
                     break;
                 default:
-                    myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
-                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
+                    myarr.column = '<li><div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
+                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></li>';
                     break;
             }
         }
@@ -120,6 +120,8 @@ $(document).ready(function () {
             edit_header();
             hover_row_component();
             edit_header();
+            $('.dropable').sortable();
+            $(".dropable").disableSelection();
         }
     });
 
