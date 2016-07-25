@@ -101,7 +101,7 @@ $(document).ready(function () {
                     myarr.component = '<div class="box_component">';
                     myarr.component += '    <label class="col-md-4 control-label" for="textinput">Ngày tháng</label>  ';
                     myarr.component += '    <div class="col-md-8">';
-                    myarr.component += '         <input type="text" placeholder="Ngày/tháng/năm" class="form-control selDate"  name="" id="" value=""/>';
+                    myarr.component += '         <input type="date" class="form-control selDate"  name="" id="" value=""/>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';
                     myarr.component += '     <button class="btn btn-default btnDelete"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
@@ -136,7 +136,6 @@ $(document).ready(function () {
                 $('.btn_edit').click(function () {
                     $('#modalComponent').modal('show');
                 });
-                selDate('.selDate');
                 delComponent();
                 edit_header();
                 hover_row_component();
@@ -144,27 +143,6 @@ $(document).ready(function () {
         });
     }
 
-    function selDate(selector) {
-        var d = new Date();
-
-        var currDate = d.getDate();
-        var currMonth = d.getMonth();
-        var currYear = d.getFullYear();
-
-        var dateStr = currDate + "/" + currMonth + "/" + currYear;
-        var now = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 0, 0, 0, 0);
-
-        $(selector).datepicker({
-            format: "dd/mm/yyyy",
-            language: "vi",
-            defaultDate: dateStr,
-            pick12HourFormat: true,
-            minDate: true,
-            changeYear: true,
-            todayHighlight: true,
-            autoclose: true
-        });
-    }
 
     //btnSave
     $('.form_builder_save').click(function () {
