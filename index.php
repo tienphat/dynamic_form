@@ -17,16 +17,13 @@
         <link href="assets/css/lib/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet">
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="assets/libs/datepicker.css" />
 
-		<script type="text/javascript" charset="utf-8" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="assets/js/angular.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/formbuilder.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/jquery-ui.min.js"></script>
 
-        <script type="text/javascript" charset="utf-8" src="assets/libs/bootstrap-datepicker.js"></script>
-        <script type="text/javascript" charset="utf-8" src="assets/libs/locales/bootstrap-datepicker.vi.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/main.js" ></script>
     </head>
 
