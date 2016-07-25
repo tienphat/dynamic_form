@@ -217,3 +217,8 @@ label {
 .page_left {
     height: 600px;
 }
+@media screen and (max-width: 800px) { 
+    .page_left {
+        height: 500px;
+    }
+}

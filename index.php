@@ -1,3 +1,11 @@
+<?php
+    ini_set('date.timezone', 'Asia/Ho_Chi_Minh');
+
+    define('DS', DIRECTORY_SEPARATOR);
+    define('SERVER_ROOT', __DIR__ . DS);
+    require SERVER_ROOT . 'config.php';
+    
+?>
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,6 +19,7 @@
         <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="assets/libs/datepicker.css" />
 
+		<script type="text/javascript" charset="utf-8" src="assets/js/angular.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/jquery.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="assets/js/formbuilder.min.js"></script>
