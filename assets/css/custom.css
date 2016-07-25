@@ -205,5 +205,10 @@ label {
     padding: 10px 25px 0px 25px;
 }
 .page_left {
-    height: 550px;
+    height: 600px;
+}
+@media screen and (max-width: 800px) { 
+    .page_left {
+        height: 500px;
+    }
 }
