@@ -170,6 +170,7 @@ $(document).ready(function () {
     $('.form_builder_save').click(function () {
         var html = $('.page_left').html();
         $('.form_designed').html(html);
+        $('.form_designed').show();
     });
 
     function delComponent() {
@@ -182,13 +183,9 @@ $(document).ready(function () {
     $('.btnClear').click(function () {
         var message = 'Bạn có chắc chắn muốn xóa không?';
         if (confirm(message)) {
-            var html = '<div class="row">';
-            html += '   <div class="col-md-12 column_sel ui-droppable">';
-            html += '   </div>';
-            html += '</div>';
-            $('.dropable').html(html);
+            $('.dropable').html('');
             set_drop();
-//                $(this).prev('span.text').remove();
+            $('.form_designed').hide();
         }
     });
 
@@ -280,7 +277,6 @@ $(document).ready(function () {
         });
         $('.dropable').find('.col_com').each(function () {
             $(this).find('.btnDeleteRow').click(function () {
-                console.log($(this).parents('.col_com'));
                 $(this).parents('.col_com').remove();
             });
         });
