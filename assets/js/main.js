@@ -11,22 +11,22 @@ $(document).ready(function () {
             components = $(this).attr('data-column');
             switch (components) {
                 case 'Column1':
-                    myarr.column = '<div class="row col_com component_row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
-                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
+                    myarr.column = '<li><div class="row col_com component_row"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
+                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></li>';
                     break;
                 case 'Header':
-                    myarr.column = '<div class="row col_com"><div class="col-md-12 column_sel">';
+                    myarr.column = '<li><div class="row col_com"><div class="col-md-12 column_sel">';
                     myarr.column += '<div class="box_component fieldset_head">';
                     myarr.column += '    <div class="col-md-12 box_header">';
                     myarr.column += '         <h4><label class="head_fieldset col-md-12">This is a label</label></h4>';
                     myarr.column += '    </div>';
                     myarr.column += '    <div class ="box_icon">';
                     myarr.column += '     <button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div>';
-                    myarr.column += '</div></div></div>';
+                    myarr.column += '</div></div></div></li>';
                     break;
                 default:
-                    myarr.column = '<div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
-                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div>';
+                    myarr.column = '<li><div class="row col_com"><div class="col-md-6 column_sel"></div><div class="col-md-6 column_sel"></div><div class ="icon_row">';
+                    myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></li>';
                     break;
             }
         }
@@ -120,6 +120,8 @@ $(document).ready(function () {
             edit_header();
             hover_row_component();
             edit_header();
+            $('.dropable').sortable();
+            $(".dropable").disableSelection();
         }
     });
 
@@ -168,6 +170,7 @@ $(document).ready(function () {
     $('.form_builder_save').click(function () {
         var html = $('.page_left').html();
         $('.form_designed').html(html);
+        $('.form_designed').show();
     });
 
     function delComponent() {
@@ -180,13 +183,9 @@ $(document).ready(function () {
     $('.btnClear').click(function () {
         var message = 'Bạn có chắc chắn muốn xóa không?';
         if (confirm(message)) {
-            var html = '<div class="row">';
-            html += '   <div class="col-md-12 column_sel ui-droppable">';
-            html += '   </div>';
-            html += '</div>';
-            $('.dropable').html(html);
+            $('.dropable').html('');
             set_drop();
-//                $(this).prev('span.text').remove();
+            $('.form_designed').hide();
         }
     });
 
@@ -278,7 +277,6 @@ $(document).ready(function () {
         });
         $('.dropable').find('.col_com').each(function () {
             $(this).find('.btnDeleteRow').click(function () {
-                console.log($(this).parents('.col_com'));
                 $(this).parents('.col_com').remove();
             });
         });

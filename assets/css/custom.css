@@ -109,6 +109,7 @@ div.droppable {
     border: 2px dashed #cccccc;
     margin-top: 20px;
     padding: 15px 10px 20px 45px;
+    display: none;
 }
 textarea {
     height: 30px;     
@@ -196,6 +197,7 @@ label {
     position: relative;
     padding: 10px 0px 0px 0px;
     border: 1px dashed #cccccc;
+    min-height: 55px;
 }
 
 .head_page {
@@ -204,6 +206,14 @@ label {
 .component_row {
     padding: 10px 25px 0px 25px;
 }
+
+
+.style_div{
+    position: absolute !important;
+    top: 10px !important;
+    left: auto !important;
+}
+
 .page_left {
     height: 600px;
 }
