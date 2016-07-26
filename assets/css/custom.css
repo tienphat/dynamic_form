@@ -96,6 +96,7 @@ div.droppable {
 }
 .dropable {
     padding-right: 15px;
+    padding-left: 30px;
 }
 .frmb-control td {
     border: 1px solid gray;
@@ -118,7 +119,7 @@ textarea {
     min-height: 53px;
 }
 .page_left{
-        padding-left: 30px;
+        /* padding-left: 30px; */
         overflow-y: scroll;
 }
 .header h3 {font-size: 29px;}
@@ -136,7 +137,7 @@ textarea {
 .box_button button {
     padding: 5px 37px;
 }
-.column_sel {padding: 9px;}
+.column_sel {padding: 9px 0px 9px 0px;}
 .box_icon,.icon_row {
     position: absolute;
     top: 0px;
@@ -196,7 +197,7 @@ label {
     position: relative;
     padding: 0px 0px 0px 0px;
     border: 1px dashed #cccccc;
-    min-height: 55px;
+    min-height: 53px;
 }
 
 .head_page {
@@ -213,10 +214,16 @@ label {
     top: 10px !important;
     left: auto !important;
 }
-
+.row_fieldset {
+    padding: 10px 0px 0px 0px !important;
+}
 .page_left {
     height: 600px;
 }
+.box_header {
+    padding-left: 0px;
+}
+
 @media screen and (max-width: 800px) { 
     .page_left {
         height: 500px;

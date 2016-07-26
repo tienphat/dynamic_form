@@ -15,7 +15,7 @@ $(document).ready(function () {
                     myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></li>';
                     break;
                 case 'Header':
-                    myarr.column = '<li><div class="row col_com"><div class="col-md-12 column_sel">';
+                    myarr.column = '<li><div class="row col_com"><div class="col-md-12 column_sel row_fieldset">';
                     myarr.column += '<div class="box_component fieldset_head">';
                     myarr.column += '    <div class="col-md-12 box_header">';
                     myarr.column += '         <h4><label class="head_fieldset col-md-12">This is a label</label></h4>';
