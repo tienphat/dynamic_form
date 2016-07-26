@@ -15,7 +15,7 @@ $(document).ready(function () {
                     myarr.column += '<button class="btn btn-default btnDeleteRow"><i class="fa fa-times" aria-hidden="true"></i></button></div></div></li>';
                     break;
                 case 'Header':
-                    myarr.column = '<li><div class="row col_com"><div class="col-md-12 column_sel">';
+                    myarr.column = '<li><div class="row col_com"><div class="col-md-12 column_sel field_header">';
                     myarr.column += '<div class="box_component fieldset_head">';
                     myarr.column += '    <div class="col-md-12 box_header">';
                     myarr.column += '         <h4><label class="head_fieldset col-md-12">This is a label</label></h4>';
@@ -39,7 +39,7 @@ $(document).ready(function () {
                 case 'Text':
                     myarr.component = '<div class="box_component com_input">';
                     myarr.component += '    <label class="col-md-4 control-label" for="textinput">Label</label>  ';
-                    myarr.component += '    <div class="col-md-8">';
+                    myarr.component += '    <div class="col-md-8" style="height: 34px;">';
                     myarr.component += '         <input type="text" class="form-control" name="" id="" value=""/></span><br>';
                     myarr.component += '    </div>';
                     myarr.component += '    <div class ="box_icon"><button class="btn btn-default btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>';

@@ -112,10 +112,11 @@ div.droppable {
     display: none;
 }
 textarea {
-    height: 30px;     
+    resize: none;
+    height: 30px;
 }
 .column_sel{
-    min-height: 53px;
+    min-height: 51px;
 }
 .page_left{
         padding-left: 30px;
@@ -125,10 +126,10 @@ textarea {
 .fieldset_head {
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
-    padding: 3px !important;
-    min-height: 48px;
+    padding: 6px !important;
+    min-height: 53px;
     text-transform: uppercase;
-    margin-top: -8px;
+    /* margin-top: -8px; */
 }
 .column_sel h4 {
     margin: 0px;
@@ -194,9 +195,8 @@ label {
 .box_component label.control-label {font-family: "myriad bold";}
 .col_com {
     position: relative;
-    padding: 0px 0px 0px 0px;
     border: 1px dashed #cccccc;
-    min-height: 55px;
+    min-height: 52px;
 }
 
 .head_page {
@@ -207,13 +207,9 @@ label {
 .box_icon button {
     padding: 3px 7px;
 }
-
-.style_div{
-    position: absolute !important;
-    top: 10px !important;
-    left: auto !important;
+.field_header {
+    padding: 0px  !important;
 }
-
 .page_left {
     height: 600px;
 }
@@ -222,3 +218,16 @@ label {
         height: 500px;
     }
 }
+/*@media screen and (max-width: 1000px) { 
+    .form_designed .col_com {
+    min-height: auto;
+    }
+    .form_designed .column_sel {
+    padding: 0 0 9px 0;
+    min-height: auto;
+
+    }
+    .fieldset_head .box_header label{
+        margin-bottom: 0px
+    }
+}*/
